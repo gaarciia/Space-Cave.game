@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>casamonstro</name>
+    <events>
+        <event-block sid="892934311849871">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="113917175917092" type="casamonstro1" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="299277137485443">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="910068500347602" type="System">
+                            <param id="0" name="Interval (seconds)">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="358869341193032" type="casamonstro1">
+                            <param id="0" name="Object">monstro1</param>
+                            <param id="1" name="Layer">&quot;Principal&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="519226004359429">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="666335780402713" type="casamonstro2" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="147157408799803">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="360297356975365" type="System">
+                            <param id="0" name="Interval (seconds)">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="315773422873046" type="casamonstro2">
+                            <param id="0" name="Object">monstro2</param>
+                            <param id="1" name="Layer">&quot;Principal&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

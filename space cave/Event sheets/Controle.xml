@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Controle</name>
+    <events>
+        <event-block sid="4230074962389367">
+            <conditions>
+                <condition id="2" name="Key is down" sid="7997339674944588" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="9365544707273939" type="player">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3382175046769804">
+            <conditions>
+                <condition id="2" name="Key is down" sid="6514495142146369" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="1045159327342201" type="player">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="1153149997333473">
+            <conditions>
+                <condition id="2" name="Key is down" sid="5352820642743606" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="8119489377892833" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="7542867018603677" type="player">
+                    <param id="0" name="Animation">&quot;andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8244340632711124">
+            <conditions>
+                <condition id="-22" name="Else" sid="8586449920967287" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="3566289213743883" type="player">
+                    <param id="0" name="Animation">&quot;parado&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9803838779726543">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="275306243835041" type="Keyboard">
+                    <param id="0" name="Key">90</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="4192017506696711" type="player">
+                    <param id="0" name="Object">tiro</param>
+                    <param id="1" name="Layer">&quot;Principal&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="5345129140754715">
+                    <conditions>
+                        <condition id="7" name="Is mirrored" sid="3298160963279201" type="player" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="3572500917515958" type="tiro">
+                            <param id="0" name="Speed">-tiro.Bullet.Speed</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Tiro</name>
+    <events>
+        <event-block sid="8766681644978458">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5190976979715874" type="tiro">
+                    <param id="0" name="Object">monstro1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="89573422810076" type="monstro1">
+                    <param id="0" name="Instance variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="6359017320739799" type="tiro" />
+                <action id="0" name="Spawn another object" sid="195659939880087" type="tiro">
+                    <param id="0" name="Object">Particles</param>
+                    <param id="1" name="Layer">&quot;Principal&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="494470152160441">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="846963725495701" type="tiro">
+                    <param id="0" name="Object">monstro2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="969383478070828" type="monstro2">
+                    <param id="0" name="Instance variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="856286890682434" type="tiro" />
+                <action id="0" name="Spawn another object" sid="386129544052399" type="tiro">
+                    <param id="0" name="Object">Particles</param>
+                    <param id="1" name="Layer">&quot;Principal&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="539595192812088">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="385348416187664" type="tiro">
+                    <param id="0" name="Object">casamonstro1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="724620713872185" type="casamonstro1">
+                    <param id="0" name="Instance variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="749303446719307" type="tiro">
+                    <param id="0" name="Object">Particles</param>
+                    <param id="1" name="Layer">&quot;Principal&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="785570400951631" type="tiro" />
+            </actions>
+        </event-block>
+        <event-block sid="632697462105458">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="650405793919672" type="tiro">
+                    <param id="0" name="Object">casamonstro2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="543274337544243" type="casamonstro2">
+                    <param id="0" name="Instance variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="348451557612411" type="tiro">
+                    <param id="0" name="Object">Particles</param>
+                    <param id="1" name="Layer">&quot;Principal&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="676414159719358" type="tiro" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

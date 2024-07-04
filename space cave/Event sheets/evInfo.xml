@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evInfo</name>
+    <events>
+        <variable constant="0" name="pressEnter" sid="600210609479609" static="0" type="number">0</variable>
+        <event-block sid="528547764426862">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="883298915973130" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="281037526716904" type="System">
+                    <param id="0" name="Variable">pressEnter</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="801735972833699" type="System">
+                    <param id="0" name="Layout">Fase1</param>
+                </action>
+                <action id="-9" name="Set value" sid="673527640455233" type="System">
+                    <param id="0" name="Variable">pressEnter</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="150079093268122">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="394506023892177" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="128899496542810" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="770262469337245" type="enter">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="676647650416284" type="System">
+                    <param id="0" name="Variable">pressEnter</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="999226055362292" type="enter">
+                    <param id="0" name="&apos;On&apos; time">0.5</param>
+                    <param id="1" name="&apos;Off&apos; time">0.5</param>
+                    <param id="2" name="Duration">350</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

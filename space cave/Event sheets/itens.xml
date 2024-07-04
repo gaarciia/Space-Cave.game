@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>itens</name>
+    <events>
+        <event-block sid="829092528605278">
+            <conditions>
+                <condition id="-18" name="On created" sid="465003335246792" type="moeda" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="330840848384771" type="moeda">
+                    <param id="0" name="Vector Y">-500</param>
+                </action>
+                <action id="-16" name="Wait" sid="783187613734994" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="868331904763558" type="moeda">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">2</param>
+                </action>
+                <action id="-16" name="Wait" sid="317761034752406" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-9" name="Destroy" sid="127775426200452" type="moeda" />
+            </actions>
+        </event-block>
+        <event-block sid="779308369308892">
+            <conditions>
+                <condition id="-18" name="On created" sid="858740117452526" type="chave" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="660334816662639" type="chave">
+                    <param id="0" name="Vector Y">-500</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="562206141039783">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="237210073048799" type="player">
+                    <param id="0" name="Instance variable">chaves</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="796534959660154" type="portal">
+                    <param id="0" name="Animation">&quot;on&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="498583642418005">
+            <conditions>
+                <condition id="-22" name="Else" sid="777721185097651" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="343351262016775" type="portal">
+                    <param id="0" name="Animation">&quot;off&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="920543615630178">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="365400465780988" type="player">
+                    <param id="0" name="Object">portal</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="222244551274859">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="648016827430077" type="player">
+                            <param id="0" name="Instance variable">vida</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="684065860699096" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="892346971740614" type="System">
+                            <param id="0" name="Layout">Victory</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

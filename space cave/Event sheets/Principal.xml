@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Principal</name>
+    <events>
+        <include>itens</include>
+        <include>montro2</include>
+        <include>casamonstro</include>
+        <include>Player</include>
+        <include>Tiro</include>
+        <include>Monstro1</include>
+        <include>Controle</include>
+        <event-block sid="241061738709370">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="254674870046364" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="771575261500858" type="barradevida">
+                    <param id="0" name="Frame number">player.vida</param>
+                </action>
+                <action id="0" name="Set text" sid="974439531395571" type="txtchaves">
+                    <param id="0" name="Text">player.chaves&amp;&quot;/10&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="830345162195831" type="txtmoedas">
+                    <param id="0" name="Text">player.moedas</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

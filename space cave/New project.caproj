@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>New project</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>3sghkc4xw0jst</unique-id>
+    <saved-with-version>28000</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>800</width>
+        <height>600</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Splashscreen</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Off</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">Yes</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="fundo" sid="3947383009024192">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4661025425920882" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\fundo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="mapa" sid="5023753149731235">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6462710422975821" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\mapa.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="player" sid="3929371038509449">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="vida" sid="7570466695995483" type="number" />
+                <instance-variable name="podeTomarDano" sid="5681080182971199" type="boolean" />
+                <instance-variable name="chaves" sid="617983710163791" type="number" />
+                <instance-variable name="moedas" sid="459958081771780" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="4782719924806037">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="4142854618852216">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="3551629788033115">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="parado" pingpong="0" repeatcount="1" repeatto="0" sid="94217348710031" speed="5">
+                    <frame duration="1" hotspotX="0.45" hotspotY="1" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Player\parado.png">
+                        <image-point name="tiro" x="0.8" y="0.24" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0" />
+                            <point x="0.9" y="0.48" />
+                            <point x="0.6" y="0.68" />
+                            <point x="0.5" y="0.96" />
+                            <point x="0.2" y="0.84" />
+                            <point x="0.15" y="0.48" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="1" name="andando" pingpong="1" repeatcount="1" repeatto="0" sid="7944395781373687" speed="5">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="1" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Player\andando0.png">
+                        <image-point name="tiro" x="0.8" y="0.25" />
+                        <collision-poly>
+                            <point x="0.0666667" y="0.0416667" />
+                            <point x="0.466667" y="0" />
+                            <point x="0.8" y="0.125" />
+                            <point x="0.933333" y="0.5" />
+                            <point x="0.866667" y="0.916667" />
+                            <point x="0.466667" y="0.875" />
+                            <point x="0.0666667" y="0.958333" />
+                            <point x="0.2" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.571429" hotspotY="1" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Player\andando11.png">
+                        <image-point name="tiro" x="0.785714" y="0.230769" />
+                        <collision-poly>
+                            <point x="0.0714286" y="0.0384615" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.0769231" />
+                            <point x="1" y="0.5" />
+                            <point x="0.785714" y="0.884615" />
+                            <point x="0.5" y="1" />
+                            <point x="0.285714" y="0.846154" />
+                            <point x="0.214286" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.533333" hotspotY="1" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Player\andando2.png">
+                        <image-point name="tiro" x="0.8" y="0.25" />
+                        <collision-poly>
+                            <point x="0.0666667" y="0.0416667" />
+                            <point x="0.466667" y="0" />
+                            <point x="0.8" y="0.125" />
+                            <point x="0.933333" y="0.5" />
+                            <point x="0.866667" y="0.916667" />
+                            <point x="0.466667" y="0.875" />
+                            <point x="0.0666667" y="0.958333" />
+                            <point x="0.266667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bloco" sid="7362996968387046">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="6539568812799021">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4120345898696444" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="7046218475281254">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="tiro" sid="7852646169779458">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="3656527860254406">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="9369821196749572">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9972817218530425" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.666667" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="plataforma" sid="6897628187814592">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="1739972071831352">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="9556467021343214">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8811147982756149" speed="7">
+                    <frame duration="1" hotspotX="0.510638" hotspotY="0.6" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Plataforma\plataforma1.png">
+                        <collision-poly>
+                            <point x="0.0212766" y="0.2" />
+                            <point x="0.489362" y="0" />
+                            <point x="0.978723" y="0.2" />
+                            <point x="0.978723" y="0.4" />
+                            <point x="0.957447" y="0.6" />
+                            <point x="0.489362" y="1" />
+                            <point x="0.0425532" y="0.6" />
+                            <point x="0.0212766" y="0.4" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.510638" hotspotY="0.6" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Plataforma\plataforma1.png">
+                        <collision-poly>
+                            <point x="0.0212766" y="0.2" />
+                            <point x="0.489362" y="0" />
+                            <point x="0.978723" y="0.2" />
+                            <point x="0.978723" y="0.4" />
+                            <point x="0.957447" y="0.6" />
+                            <point x="0.489362" y="1" />
+                            <point x="0.0425532" y="0.6" />
+                            <point x="0.0212766" y="0.4" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="monstro1" sid="4369173767530488">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="vida" sid="6524648311406056" type="number" />
+                <instance-variable name="andarParaDireita" sid="4965879513657489" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="3932249236569068">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="2585549791821952">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="7383519401410233" speed="10">
+                    <frame duration="1" hotspotX="0.529412" hotspotY="1" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Monstros\Monstro1\Monstro1_0.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.103448" />
+                            <point x="0.852941" y="0.172414" />
+                            <point x="0.911765" y="0.482759" />
+                            <point x="0.882353" y="0.862069" />
+                            <point x="0.5" y="0.965517" />
+                            <point x="0.0294118" y="0.965517" />
+                            <point x="0.323529" y="0.482759" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Monstros\Monstro1\Monstro1_1.png">
+                        <collision-poly>
+                            <point x="0.307692" y="0.266667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.807692" y="0.166667" />
+                            <point x="0.884615" y="0.5" />
+                            <point x="0.846154" y="0.866667" />
+                            <point x="0.5" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.0769231" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Monstros\Monstro1\Monstro1_2.png">
+                        <collision-poly>
+                            <point x="0.285714" y="0.266667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.75" y="0.233333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.75" y="0.766667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0357143" y="0.966667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Particles" sid="1320305061737468">
+            <plugin id="Particles" />
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="9969471909154921">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Function" sid="2398825709403548">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="casamonstro1" sid="783876203646881">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="vida" sid="487050987204679" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="858786060999280" speed="5">
+                    <frame duration="1" hotspotX="0.517241" hotspotY="0.857143" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\cria mons 4.png" />
+                    <frame duration="1" hotspotX="0.517241" hotspotY="0.857143" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\cria mons 3.png" />
+                    <frame duration="1" hotspotX="0.517241" hotspotY="0.857143" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\cria mons 2.png" />
+                    <frame duration="1" hotspotX="0.517241" hotspotY="0.857143" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\cria mons 1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="barradevida" sid="679578408335701">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="329017938753278" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.571429" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Player\Vida\vida0.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.571429" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Player\Vida\vida1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.571429" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Player\Vida\vida2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.571429" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Player\Vida\vida3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="monstro2" sid="699263671860942">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="vida" sid="294663917949235" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="402624631244317">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Pathfinding" sid="136249440311321">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="310744991576290" speed="10">
+                    <frame duration="1" hotspotX="0.545455" hotspotY="0.545455" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Monstros\Monstro2\Monstro2_0.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.555556" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Monstros\Monstro2\Monstro2_1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Monstros\Monstro2\Monstro2_2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="casamonstro2" sid="945641906390203">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="vida" sid="507014553393295" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="149421102914349" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.125" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="moeda" sid="250351477035616">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="387796298582562">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="686411987022583">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="152238637111553">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="8" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="782530296114608" speed="10">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\Moeda_0.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\Moeda_1.png" />
+                    <frame duration="1" hotspotX="0.512821" hotspotY="1" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\Moeda_2.png" />
+                    <frame duration="1" hotspotX="1.81818" hotspotY="-2.0625" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\Moeda_3.png" />
+                    <frame duration="1" hotspotX="0.533333" hotspotY="1" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\Moeda_4.png" />
+                    <frame duration="1" hotspotX="0.515152" hotspotY="1" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\Moeda_5.png" />
+                    <frame duration="1" hotspotX="0.512821" hotspotY="1" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\Moeda_6.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\Moeda_7.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="chave" sid="629596025820187">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="312888974331248">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="721397828990460">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="380253951714523" speed="10">
+                    <frame duration="1" hotspotX="0.545455" hotspotY="0.545455" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\Chave_0.png" />
+                    <frame duration="1" hotspotX="0.555556" hotspotY="0.555556" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\Chave_1.png" />
+                    <frame duration="1" hotspotX="0.571429" hotspotY="0.571429" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\Chave_2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hudmoeda" sid="460568314355576">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="7" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="932385532677254" speed="10">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\Moeda_1.png" />
+                    <frame duration="1" hotspotX="0.512821" hotspotY="0.5" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\Moeda_2.png" />
+                    <frame duration="1" hotspotX="0.515152" hotspotY="0.5" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\Moeda_3.png" />
+                    <frame duration="1" hotspotX="0.533333" hotspotY="0.5" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\Moeda_4.png" />
+                    <frame duration="1" hotspotX="0.515152" hotspotY="0.5" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\Moeda_5.png" />
+                    <frame duration="1" hotspotX="0.512821" hotspotY="0.5" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\Moeda_6.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\Moeda_7.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hudchave" sid="366136469702476">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="869380396785593" speed="10">
+                    <frame duration="1" hotspotX="0.545455" hotspotY="0.545455" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\Chave_0.png" />
+                    <frame duration="1" hotspotX="0.555556" hotspotY="0.555556" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\Chave_1.png" />
+                    <frame duration="1" hotspotX="0.571429" hotspotY="0.571429" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\Chave_2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txtmoedas" sid="724992298242547">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txtchaves" sid="928952915903576">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="portal" sid="980594311099637">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="off" pingpong="0" repeatcount="1" repeatto="0" sid="409620610184913" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\PortalOff_1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\PortalOff_0.png" />
+                </animation>
+                <animation framecount="4" loop="1" name="on" pingpong="0" repeatcount="1" repeatto="0" sid="830512908793112" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\PortalOn_3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\PortalOn_2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\PortalOn_1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Itens\PortalOn_0.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="lava" sid="245685412062424">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="550289992291478" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Telas_etc\Fogo_2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Telas_etc\Fogo_1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Telas_etc\Fogo_0.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="estaca" sid="128311259626948">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="363604953265386">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="956881318972660">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="366276380360102" speed="5">
+                    <frame duration="1" hotspotX="0.515152" hotspotY="0.5" original-source="C:\Users\gabri\Downloads\game arq\Assets\Imagens\Telas_etc\Estaca.png">
+                        <collision-poly>
+                            <point x="0.030303" y="0.00420168" />
+                            <point x="0.969697" y="0.00420168" />
+                            <point x="0.818182" y="0.5" />
+                            <point x="0.606061" y="0.945378" />
+                            <point x="0.484848" y="1" />
+                            <point x="0.393939" y="0.945378" />
+                            <point x="0.242424" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="splashscreen" sid="243501079023281">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="493664179749558" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\gabri\Downloads\Blue Illustration Game Presentation.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="enter" sid="600688646416936">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="817194145753690">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="114363225449156" speed="5">
+                    <frame duration="1" hotspotX="0.50039" hotspotY="0.501385" original-source="C:\Users\gabri\Downloads\Daco_4422541.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="vitoria" sid="878347724095965">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="231665298043118" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\gabri\Downloads\Minimalist Tech Black and White Same Over Typography T-Shirt (1).png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="gameOver" sid="883359515597832">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="468934704699387" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\gabri\Downloads\Minimalist Tech Black and White Same Over Typography T-Shirt.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Fase1.xml</layout>
+        <layout>Splashscreen.xml</layout>
+        <layout>Victory.xml</layout>
+        <layout>GameOver.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Principal.xml</event-sheet>
+        <event-sheet>Controle.xml</event-sheet>
+        <event-sheet>Monstro1.xml</event-sheet>
+        <event-sheet>Tiro.xml</event-sheet>
+        <event-sheet>Player.xml</event-sheet>
+        <event-sheet>casamonstro.xml</event-sheet>
+        <event-sheet>montro2.xml</event-sheet>
+        <event-sheet>itens.xml</event-sheet>
+        <event-sheet>evSplashScreen.xml</event-sheet>
+        <event-sheet>evGameover.xml</event-sheet>
+        <event-sheet>evInfo.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="31" />
+        <global-instance type="Function" uid="45" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

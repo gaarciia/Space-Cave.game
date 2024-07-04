@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Monstro1</name>
+    <events>
+        <event-block sid="8085397281686147">
+            <conditions>
+                <condition id="-11" name="For Each" sid="7676197409890872" type="System">
+                    <param id="0" name="Object">monstro1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1559093675270083">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="7617509248550721" type="monstro1">
+                            <param id="0" name="Instance variable">andarParaDireita</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="6495856141790565" type="monstro1">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5897221548469336">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3744122554833891" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="4667078621824162" type="monstro1">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2865487134856584">
+            <conditions>
+                <condition behavior="Platform" id="10" name="Is by wall" sid="5337288587501881" type="monstro1">
+                    <param id="0" name="Side">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="6277601722766328" type="monstro1">
+                    <param id="0" name="Instance variable">andarParaDireita</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="4308567311103703" type="monstro1">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2007507057890061">
+            <conditions>
+                <condition behavior="Platform" id="10" name="Is by wall" sid="311536402073168" type="monstro1">
+                    <param id="0" name="Side">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="7391246979609019" type="monstro1">
+                    <param id="0" name="Instance variable">andarParaDireita</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="9269758607562276" type="monstro1">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6239887068214622">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="765967514835687" type="monstro1">
+                    <param id="0" name="Instance variable">vida</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="7868805337215476" type="monstro1" />
+                <action id="0" name="Spawn another object" sid="387726593369419" type="monstro1">
+                    <param id="0" name="Object">moeda</param>
+                    <param id="1" name="Layer">&quot;Principal&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="566918748161445">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="456564676159853" type="casamonstro1">
+                    <param id="0" name="Instance variable">vida</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="824200273276002" type="casamonstro1">
+                    <param id="0" name="Object">Particles</param>
+                    <param id="1" name="Layer">&quot;Principal&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="583635073390564" type="casamonstro1">
+                    <param id="0" name="Object">chave</param>
+                    <param id="1" name="Layer">&quot;Principal&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="636354214071764" type="casamonstro1" />
+            </actions>
+        </event-block>
+        <event-block sid="374803818504013">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="107400278404703" type="monstro1">
+                    <param id="0" name="Object">lava</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="723131343666783" type="monstro1">
+                    <param id="0" name="Object">Particles</param>
+                    <param id="1" name="Layer">&quot;Principal&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="782426263199465" type="monstro1" />
+            </actions>
+        </event-block>
+        <event-block sid="449721645109054">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="710669213350528" type="monstro1">
+                    <param id="0" name="Object">estaca</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="990518885180820" type="monstro1">
+                    <param id="0" name="Object">Particles</param>
+                    <param id="1" name="Layer">&quot;Principal&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="738276494093109" type="monstro1" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
